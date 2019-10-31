@@ -1,0 +1,12 @@
+//$cx-include-global-rules: true;
+//@import "~cx/src/variables";
+//@import "~cx/src/index";
+
+@import "layout/index";
+@import "routes/default/index";
+@import "widgets/index";
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,49 @@
+.ghrc {
+  padding: 8px 16px; 
+  display: flex; 
+  align-items: center;
+  border-bottom: 1px solid #eee; 
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.ghrc_hash {
+  font-size: 13px;
+  font-weight: 600; 
+  border: 1px solid lightgray; 
+  padding: 5px 10px; 
+  margin-left: auto; 
+  border-radius: 4px;
+  text-decoration: none;
+  color: #0366d6;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+    font-size: 12px;
+    width: 50px;
+    text-align: center;
+}
+
+.ghrc_avatar {
+  margin-right: 8px;
+  vertical-align: top;
+  position: relative;
+  top: -3px;
+  margin-top: 2px;
+}
+
+.ghrc_title {
+  font-weight: 500;
+  margin-bottom: 4px;
+  font-size: 13px;
+}
+
+.ghrc_desc {  
+  font-size: 12px;
+  color: #586069;
+
+  strong {
+    font-weight: 500;
+  }
+
+}
