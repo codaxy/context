@@ -29,7 +29,7 @@ for (let i = 0; i < 30; i++) {
 export default ({ width, height }) => (
     <cx>
         <DashboardWidget title="Burndown Chart" width={width} height={height} className="flex-col">
-            <Svg style="flex: 1; height: auto; margin: 0.5rem">
+            <Svg style="flex: 1; height: 100%; min-height: 200px; margin: 0.5rem">
                 <Chart
                     margin="10 10 25 30"
                     axes={{

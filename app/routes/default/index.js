@@ -1,5 +1,6 @@
 import BurndownChart from '../../widgets/burndown-chart';
 import GithubRecentCommits from '../../widgets/github-recent-commits';
+import Wiki from '../../widgets/wiki';
 
 /*
 
@@ -12,10 +13,7 @@ DEAS:
 
 export default (
     <cx>
-        <div class="grid">
-            <div class="box w2 h2">
-                <div class="box_title">Discussion</div>
-            </div>
+        <div class="app_content grid overflow-auto">
             <div class="w2">
                 <div class="box_title">Tasks</div>
             </div>
@@ -30,9 +28,37 @@ export default (
             <div class="w2">
                 <div class="box_title">Attachments</div>
             </div>
-            <div class="w2">
-                <div class="box_title">Wiki</div>
-            </div>
+
+            <Wiki
+                width={2}
+                markdown={`
+### Wiki
+
+Wiki can contain instructions in form of long text formatted using Markdown.
+
+#### Supported options
+
+Standard Markdown notation applies for **bold**, *italic*, \`code\`, and ~strikethrough~.
+
+###### Code Blocks
+
+\`\`\`
+This is a code snippet
+\`\`\`
+
+
+###### Tables
+
+| Command | Description |
+| --- | --- |
+| git status | List all new or modified files |
+| git diff | Show file differences that haven't been staged |
+
+
+
+            `}
+            />
+
             <div class="w4 h2">
                 <div class="box_title">Timeline</div>
             </div>
@@ -46,10 +72,16 @@ export default (
             </div>
             <div class="box w2">
                 <div class="box_title">Questions and Answers</div>
-                <p ws>Ask questions and get help and instructions from other team members.</p>
+                <div class="wiki">
+                    <p ws>Ask questions and get help and instructions from other team members.</p>
+                </div>
             </div>
             <div class="box h2 w2">
                 <div class="box_title">Activity</div>
+            </div>
+
+            <div class="box w4 h4">
+                <div class="box_title">Discussion</div>
             </div>
         </div>
     </cx>

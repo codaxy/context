@@ -1,14 +1,12 @@
 import { Store } from 'cx/data';
-import { History, startHotAppLoop } from 'cx/ui';
+import { History, startHotAppLoop, enableCultureSensitiveFormatting } from 'cx/ui';
 import { Debug } from 'cx/util';
 import Routes from './routes';
 
 //import css
-import 'cx/dist/widgets.css';
-import 'cx/dist/svg.css';
-import 'cx/dist/charts.css';
-
 import './index.scss';
+
+enableCultureSensitiveFormatting();
 
 //store will hold the application state
 const store = new Store();

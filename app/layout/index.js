@@ -3,17 +3,17 @@ import { ContentPlaceholder, Link } from 'cx/widgets';
 export default (
     <cx>
         <div class="app">
-            <header ws>
-                <img class="logo" src="~/assets/img/cxjs.svg" alt="Logo" />
-
-                <Link href="~/" url-bind="url">
-                    Home
+            <header class="app_header">Header</header>
+            <aside class="app_modules">
+                <Link class="module" href="~/">
+                    M1
                 </Link>
-            </header>
-            <main>
-                <ContentPlaceholder />
-            </main>
-            <footer />
+                <Link class="module" href="~/2">
+                    M2
+                </Link>
+            </aside>
+            <aside class="app_sidebar"></aside>
+            <ContentPlaceholder />
         </div>
     </cx>
 );

@@ -1,0 +1,33 @@
+.wiki {
+    padding: 4px 16px 8px;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    h1 {
+    }
+
+    table {
+        border-spacing: 0;
+        border-collapse: collapse;
+    }
+
+    th {
+        text-align: inherit;
+    }
+
+    td,
+    th {
+        border: 1px solid #eee;
+        padding: 4px 8px;
+    }
+}

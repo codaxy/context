@@ -1,3 +1,7 @@
-# CxJS Template
+# Context
 
-A template for [CxJS projects](https://cxjs.io) in [CodeSandbox](https://codesandbox.io).
+Next gen project management software.
+
+### Ideas
+
+0. Add tabs for multiple issues like in VS Code

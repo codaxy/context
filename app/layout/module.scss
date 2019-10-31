@@ -1,0 +1,13 @@
+.module {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    font-weight: 500;
+    text-decoration: none;
+
+    &:hover {
+        background: rgba(black, 0.2);
+    }
+}
