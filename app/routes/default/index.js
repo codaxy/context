@@ -1,7 +1,7 @@
 import BurndownChart from '../../widgets/burndown-chart';
 import GithubRecentCommits from '../../widgets/github-recent-commits';
 import Wiki from '../../widgets/wiki';
-
+import Sidebar from './sidebar';
 /*
 
 DEAS: 
@@ -13,6 +13,7 @@ DEAS:
 
 export default (
     <cx>
+        <Sidebar />
         <div class="app_content grid overflow-auto">
             <div class="w2">
                 <div class="box_title">Tasks</div>
@@ -22,7 +23,7 @@ export default (
             </div>
             <GithubRecentCommits width={2} />
             <div class="w2">
-                <div class="box_title">Pull Requests</div>
+                <div class="box_title">Time Entries</div>
             </div>
             <BurndownChart width={2} height={1} />
             <div class="w2">
@@ -59,16 +60,24 @@ This is a code snippet
             `}
             />
 
+            <div class="w2 h1">
+                <div class="box_title">Image Gallery</div>
+            </div>
+
             <div class="w4 h2">
                 <div class="box_title">Timeline</div>
             </div>
             <div class="box w2">
                 <div class="box_title">Workflow</div>
-                <p ws>Define applicable actions at each state. Affects all child items.</p>
+                <div class="wiki">
+                    <p ws>Define applicable actions at each state. Affects all child items.</p>
+                </div>
             </div>
             <div class="box w2">
                 <div class="box_title">Team & Roles</div>
-                <p ws>Permissions defined in this box affect all child items.</p>
+                <div class="wiki">
+                    <p ws>Permissions defined in this box affect all child items.</p>
+                </div>
             </div>
             <div class="box w2">
                 <div class="box_title">Questions and Answers</div>

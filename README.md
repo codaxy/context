@@ -1,6 +1,6 @@
 # Context
 
-Next gen project management software.
+Developer-centric project management software.
 
 ### Ideas
 

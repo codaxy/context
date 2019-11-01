@@ -16,13 +16,22 @@ body {
         'h h h'
         'm s c';
 
-    grid-template-columns: 64px 400px 1fr;
+    grid-template-columns: 64px minmax(0, 400px) 1fr;
     grid-template-rows: 64px auto;
 }
 
 .app_header {
     grid-area: h;
     background: #484840;
+
+    h1 {
+        color: white;
+        margin: 0 24px;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 62px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
 }
 
 .app_modules {
@@ -32,7 +41,6 @@ body {
 
 .app_sidebar {
     grid-area: s;
-    background: grey;
 }
 
 .app_footer {
