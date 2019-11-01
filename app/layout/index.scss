@@ -41,6 +41,8 @@ body {
 
 .app_sidebar {
     grid-area: s;
+    box-shadow: 1px 0 2px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
 .app_footer {

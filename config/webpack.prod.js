@@ -1,49 +1,53 @@
-const
-    webpack = require('webpack'),
-    MiniCssExtractPlugin = require("mini-css-extract-plugin"),
-    CopyWebpackPlugin = require("copy-webpack-plugin"),
-    merge = require("webpack-merge"),
-    common = require("./webpack.config"),
-    path = require("path"),
-    p = p => path.join(__dirname, "../", p || "");
+const webpack = require('webpack'),
+    MiniCssExtractPlugin = require('mini-css-extract-plugin'),
+    CopyWebpackPlugin = require('copy-webpack-plugin'),
+    merge = require('webpack-merge'),
+    common = require('./webpack.config'),
+    path = require('path'),
+    p = p => path.join(__dirname, '../', p || '');
 
-module.exports = merge(common,  {
+module.exports = merge(common, {
     mode: 'production',
 
     output: {
-        path: p("dist"),
-        publicPath: "/",
-        filename: "[name].[chunkhash].js",
-        chunkFilename: "[name].[chunkhash].js",
-        hashDigestLength: 6
+        path: p('dist'),
+        publicPath: '/',
+        filename: '[name].[chunkhash].js',
+        chunkFilename: '[name].[chunkhash].js',
+        hashDigestLength: 6,
     },
 
     module: {
         rules: [
             {
                 test: /\.scss$/,
-                loaders: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
+                loaders: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
             },
             {
                 test: /\.css$/,
-                loaders: [MiniCssExtractPlugin.loader, "css-loader"]
-            }
-        ]
+                loaders: [MiniCssExtractPlugin.loader, 'css-loader'],
+            },
+        ],
     },
 
     plugins: [
         new webpack.DefinePlugin({
-            "process.env.NODE_ENV": JSON.stringify("production")
+            'process.env.NODE_ENV': JSON.stringify('production'),
         }),
         new MiniCssExtractPlugin({
-            filename: "[name].[hash].css",
-            chunkFilename: "[name].[hash].css"
+            filename: '[name].[hash].css',
+            chunkFilename: '[name].[hash].css',
         }),
         new CopyWebpackPlugin([
             {
-                from: p("./assets"),
-                to: p("./dist/assets")
-            }
-        ])
-    ]
+                from: p('./assets'),
+                to: p('./dist/assets'),
+            },
+            {
+                from: path.resolve(__dirname, './netlify.redirects'),
+                to: '_redirects',
+                toType: 'file',
+            },
+        ]),
+    ],
 });
