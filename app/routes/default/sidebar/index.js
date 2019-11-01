@@ -20,7 +20,7 @@ const demoData = [
 
 export default (
     <cx>
-        <aside class="white app_sidebar">
+        <aside class="white app_sidebar" style="width: 400px">
             <List
                 records={demoData}
                 itemPad={false}

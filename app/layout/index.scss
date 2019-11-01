@@ -16,13 +16,16 @@ body {
         'h h h'
         'm s c';
 
-    grid-template-columns: 64px minmax(0, 400px) 1fr;
+    grid-template-columns: 64px auto 1fr;
     grid-template-rows: 64px auto;
 }
 
 .app_header {
     grid-area: h;
     background: #484840;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1;
 
     h1 {
         color: white;
@@ -41,7 +44,7 @@ body {
 
 .app_sidebar {
     grid-area: s;
-    box-shadow: 1px 0 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 0 3px rgba(0, 0, 0, 0.1);
     position: relative;
 }
 
