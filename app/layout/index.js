@@ -1,4 +1,6 @@
-import { ContentPlaceholder, Link } from 'cx/widgets';
+import { ContentPlaceholder, Link, enableTooltips } from 'cx/widgets';
+
+enableTooltips();
 
 export default (
     <cx>
@@ -7,6 +9,9 @@ export default (
                 <h1>Context</h1>
             </header>
             <aside class="app_modules">
+                <Link class="module" href="~/home" url-bind="url" tooltip="Personal Dashboard">
+                    Home
+                </Link>
                 <Link class="module" href="~/map" url-bind="url">
                     Map
                 </Link>
