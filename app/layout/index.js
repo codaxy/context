@@ -9,7 +9,8 @@ export default (
                 <h1>Context</h1>
             </header>
             <aside class="app_modules">
-                <Link class="module" href="~/home" url-bind="url" tooltip="Personal Dashboard">
+                <div class="spacer module" />
+                <Link class="module" href="~/home" url-bind="url">
                     Home
                 </Link>
                 <Link class="module" href="~/map" url-bind="url">

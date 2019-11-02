@@ -1,4 +1,4 @@
-import { List } from 'cx/widgets';
+import { List, TextField } from 'cx/widgets';
 import { KeySelection } from 'cx/ui';
 
 const demoData = [
@@ -20,11 +20,14 @@ const demoData = [
 
 export default (
     <cx>
-        <aside class="white app_sidebar" style="width: 400px">
+        <aside class="app_sidebar p2" style="width: 400px">
+            <TextField value-bind="$page.search" placeholder="Search" class="w100 mb2" />
+
             <List
                 records={demoData}
                 itemPad={false}
                 selection={{ bind: '$page.issueId', type: KeySelection }}
+                mod="bordered"
             >
                 <div class="issueitem">
                     <div class="issueitem_name" text-bind="$record.name" />

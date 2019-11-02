@@ -2,6 +2,7 @@ html {
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji,
         Segoe UI Emoji;
     font-size: 16px;
+    background-color: #f6f6f6;
 }
 
 body {
@@ -20,10 +21,12 @@ body {
     grid-template-rows: 64px auto;
 }
 
+$default-border-color: #cecece;
+$default-sidebar-background: #fdfdfd;
+
 .app_header {
     grid-area: h;
     background: #484840;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
     position: relative;
     z-index: 1;
 
@@ -31,7 +34,7 @@ body {
         color: white;
         margin: 0 24px;
         font-size: 24px;
-        font-weight: 500;
+        font-weight: 800;
         line-height: 62px;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
@@ -39,24 +42,36 @@ body {
 
 .app_modules {
     grid-area: m;
-    background: #fafafa;
+    background: #f1f1f1;
+    border-right: 1px solid $default-border-color;
+    position: relative;
+    z-index: 1;
 }
 
 .app_sidebar {
     grid-area: s;
-    box-shadow: 1px 0 3px rgba(0, 0, 0, 0.1);
+    border-right: 1px solid $default-border-color;
     position: relative;
+    background: $default-sidebar-background;
 }
 
 .app_footer {
     grid-area: f;
     background: #fafafa;
-    box-shadow: 0 -1px 5px rgba(black, 0.3);
     position: relative;
 }
 
 .app_content {
     grid-area: c;
+
+    &.filled {
+        background: linear-gradient(
+            to right,
+            $default-sidebar-background,
+            rgba(0, 0, 0, 0),
+            $default-sidebar-background
+        );
+    }
 }
 
 @import './module';

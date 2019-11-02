@@ -1,5 +1,8 @@
 $cx-include-global-rules: true;
+$cx-default-border-color: #d5d5d5;
+
 @import '~cx/src/variables';
+
 @import '~cx/src/index';
 
 @import 'layout/index';
@@ -17,4 +20,24 @@ $cx-include-global-rules: true;
 
 .white {
     background: white;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.p1 {
+    padding: 0.25rem;
+}
+
+.p2 {
+    padding: 0.5rem;
+}
+
+.mb1 {
+    margin-bottom: 0.25rem;
+}
+
+.mb2 {
+    margin-bottom: 0.5rem;
 }
