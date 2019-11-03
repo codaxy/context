@@ -7,7 +7,7 @@ export default createFunctionalComponent(() => {
 
     return (
         <cx>
-            <aside class="app_sidebar p2" style="width: 400px">
+            <aside class="app_sidebar p2 flex-col" style="width: 400px">
                 <TextField value-bind="$page.search" placeholder="Search" class="w100 mb2" />
 
                 <List
@@ -15,6 +15,7 @@ export default createFunctionalComponent(() => {
                     itemPad={false}
                     selection={{ bind: '$page.issueId', type: KeySelection }}
                     mod="bordered"
+                    style="flex: 1 1 0"
                 >
                     <div class="issueitem">
                         <div class="issueitem_name" text-bind="$record.name" />

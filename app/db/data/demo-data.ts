@@ -1,4 +1,7 @@
-import { Issue } from './model';
+import { Issue } from '../../model/model';
+
+
+
 
 /* Unused uuids. Remove as u use.
 

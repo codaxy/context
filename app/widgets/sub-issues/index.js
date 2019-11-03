@@ -2,14 +2,14 @@ import { Repeater } from 'cx/widgets';
 import DashboardWidget from '../DashboardWidget';
 import { createFunctionalComponent } from 'cx/ui';
 import { useState, useTrigger } from 'cx/hooks';
-import { db } from '../../db/instance';
+import { db } from '../../db';
 
 export const SubIssues = createFunctionalComponent(({ width, height }) => {
     let issues = useState();
 
     useTrigger([], async () => {
-        let data = await db.issues.filter(f => f.code == '5').toArray();
-        issues.set(data);
+        let data = await db.getIssues();
+        issues.set(data.filter(f => f.code == '5'));
     });
 
     return (

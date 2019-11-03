@@ -7,3 +7,4 @@ Developer-centric project management software.
 ### Ideas
 
 -   Use IndexedDB to cache data and support offline operations
+-   Implement client side full text search in a worker - look how to persist FTS index data across sessions
