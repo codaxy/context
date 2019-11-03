@@ -1,16 +1,14 @@
 module.exports = {
     cacheDirectory: true,
-    cacheIdentifier: "v1",
+    cacheIdentifier: 'v1',
     presets: [
         [
-            "cx-env",
+            'cx-env',
             {
                 targets: {
-                    chrome: 50,
-                    ie: 11,
+                    chrome: 70,
                     firefox: 50,
-                    edge: 12,
-                    safari: 9
+                    safari: 13,
                 },
                 modules: false,
                 loose: true,
@@ -18,11 +16,12 @@ module.exports = {
                 corejs: 3,
                 cx: {
                     imports: {
-                        useSrc: true
-                    }
-                }
-            }
-        ]
+                        useSrc: true,
+                    },
+                },
+            },
+        ],
+        '@babel/preset-typescript',
     ],
-    plugins: []
+    plugins: [],
 };

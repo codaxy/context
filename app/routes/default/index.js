@@ -1,7 +1,9 @@
-import BurndownChart from '../../widgets/burndown-chart';
-import GithubRecentCommits from '../../widgets/github-recent-commits';
-import Wiki from '../../widgets/wiki';
+import { BurndownChart } from '../../widgets/burndown-chart';
+import { GitHubRecentCommits } from '../../widgets/github-recent-commits';
+import { Wiki } from '../../widgets/wiki';
 import Sidebar from './sidebar';
+import { SubIssues } from '../../widgets/sub-issues';
+import { Todo } from '../../widgets/todo';
 /*
 
 DEAS: 
@@ -16,13 +18,9 @@ export default (
         <Sidebar />
         <div class="app_content overflow-auto">
             <div class="grid">
-                <div class="w2">
-                    <div class="box_title">Tasks</div>
-                </div>
-                <div class="w2">
-                    <div class="box_title">TODO</div>
-                </div>
-                <GithubRecentCommits width={2} />
+                <SubIssues width={2} />
+                <Todo width={2} />
+                <GitHubRecentCommits width={2} />
                 <div class="w2">
                     <div class="box_title">Time Entries</div>
                 </div>

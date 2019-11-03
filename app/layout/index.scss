@@ -28,7 +28,8 @@ $default-sidebar-background: #fdfdfd;
     grid-area: h;
     background: #484840;
     position: relative;
-    z-index: 1;
+    display: flex;
+    align-items: center;
 
     h1 {
         color: white;
@@ -75,3 +76,4 @@ $default-sidebar-background: #fdfdfd;
 }
 
 @import './module';
+@import './header';

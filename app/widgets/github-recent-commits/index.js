@@ -32,7 +32,7 @@ let sampleData = [
     },
 ];
 
-export default ({ width, height }) => (
+export const GitHubRecentCommits = ({ width, height }) => (
     <cx>
         <DashboardWidget width={width} height={height} title="Recent Commits">
             <Repeater records={sampleData}>

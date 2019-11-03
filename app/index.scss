@@ -1,13 +1,14 @@
 $cx-include-global-rules: true;
 $cx-default-border-color: #d5d5d5;
 
-@import '~cx/src/variables';
+@import '~cx/src/variables.scss';
 
-@import '~cx/src/index';
+@import '~cx/src/index.scss';
 
-@import 'layout/index';
-@import 'routes/default/index';
-@import 'widgets/index';
+@import 'layout/index.scss';
+@import 'components/index.scss';
+@import 'widgets/index.scss';
+@import 'routes/default/index.scss';
 
 .flex-col {
     display: flex;

@@ -1,6 +1,7 @@
-import BurndownChart from '../../widgets/burndown-chart';
-import GithubRecentCommits from '../../widgets/github-recent-commits';
-import Wiki from '../../widgets/wiki';
+import { BurndownChart } from '../../widgets/burndown-chart';
+import { GithubRecentCommits } from '../../widgets/github-recent-commits';
+import { Wiki } from '../../widgets/wiki';
+import { Todo } from '../../widgets/todo';
 
 export default (
     <cx>
@@ -9,9 +10,9 @@ export default (
                 <div class="w2">
                     <div class="box_title">Assigned to Me</div>
                 </div>
-                <div class="w2">
-                    <div class="box_title">TODO</div>
-                </div>
+
+                <Todo width={2} />
+
                 <div class="w2">
                     <div class="box_title">Time Entries</div>
                 </div>

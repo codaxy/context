@@ -4,7 +4,7 @@ import { getSelector } from 'cx/data';
 
 import * as marked from 'marked';
 
-export default ({ width, height, markdown }) => (
+export const Wiki = ({ width, height, markdown }) => (
     <cx>
         <DashboardWidget width={width} height={height}>
             <div

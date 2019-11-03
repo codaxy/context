@@ -26,7 +26,7 @@ for (let i = 0; i < 30; i++) {
     if (remaining < 0) remaining = 0;
 }
 
-export default ({ width, height }) => (
+export const BurndownChart = ({ width, height }) => (
     <cx>
         <DashboardWidget title="Burndown Chart" width={width} height={height} className="flex-col">
             <Svg style="flex: 1; height: 100%; min-height: 200px; margin: 0.5rem">
