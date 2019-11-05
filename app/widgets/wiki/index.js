@@ -10,7 +10,7 @@ export const Wiki = ({ width, height, markdown }) => (
             <div
                 class="wiki"
                 html={computable(getSelector(markdown), markdown => {
-                    return marked(markdown);
+                    return markdown ? marked(markdown) : '';
                 })}
             />
         </DashboardWidget>

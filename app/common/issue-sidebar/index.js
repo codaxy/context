@@ -2,7 +2,7 @@ import { List, TextField } from 'cx/widgets';
 import { KeySelection, createFunctionalComponent } from 'cx/ui';
 import { getModel } from './model';
 
-export default createFunctionalComponent(() => {
+export const IssueSidebar = createFunctionalComponent(() => {
     const { issues } = getModel();
 
     return (
@@ -13,7 +13,7 @@ export default createFunctionalComponent(() => {
                 <List
                     records={issues}
                     itemPad={false}
-                    selection={{ bind: '$page.issueId', type: KeySelection }}
+                    selection={{ bind: 'issueSidebar.selectedIssueId', type: KeySelection }}
                     mod="bordered"
                     style="flex: 1 1 0"
                 >

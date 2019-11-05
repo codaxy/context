@@ -7,8 +7,9 @@ $cx-default-border-color: #d5d5d5;
 
 @import 'layout/index.scss';
 @import 'components/index.scss';
+@import 'common/index.scss';
 @import 'widgets/index.scss';
-@import 'routes/default/index.scss';
+@import './routes/index.scss';
 
 .flex-col {
     display: flex;

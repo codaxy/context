@@ -61,6 +61,7 @@ interface Issue {
     state: string;
     created_at: string;
     closed_at: string;
+    body: string;
 }
 
 export async function fetchGHIssues(): Promise<Issue[]> {

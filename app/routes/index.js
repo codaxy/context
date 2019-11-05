@@ -4,21 +4,22 @@ import AppLayout from '../layout';
 import Default from './default';
 import About from './about';
 import Home from './home';
+import Issues from './issues';
+import { SandboxedRoute } from '../components/SandboxedRoute';
 
 export default (
     <cx>
         <PureContainer outerLayout={AppLayout}>
-            <Sandbox key-bind="url" storage-bind="pages">
-                <Route url-bind="url" route="~/home">
-                    <Home />
-                </Route>
-                <Route url-bind="url" route="~/">
-                    <Default />
-                </Route>
-                <Route url-bind="url" route="~/about">
-                    <About />
-                </Route>
-            </Sandbox>
+        
+            <SandboxedRoute url-bind="url" route="~/home">
+                <Home />
+            </SandboxedRoute>
+            <SandboxedRoute url-bind="url" route="~/">
+                <Default />
+            </SandboxedRoute>
+            <Route url-bind="url" route="~/issues/:issueId">
+                <Issues />
+            </Route>
         </PureContainer>
     </cx>
 );

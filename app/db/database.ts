@@ -44,6 +44,7 @@ async function importIssues() {
             reporter: issue.user.login,
             reportTime: Date.parse(issue.created_at),
             type: 'task' as any,
+            description: issue.body
         }));
     console.log('Imported GH data', data);
     database.issues.bulkPut(data);

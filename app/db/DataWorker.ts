@@ -18,4 +18,8 @@ const methods: DataInterface = {
     getIssues(): Promise<Issue[]> {
         return database.issues.toArray();
     },
+
+    getIssue(issueId: string): Promise<Issue> {
+        return database.issues.get(issueId);
+    },
 };

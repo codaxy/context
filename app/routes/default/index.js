@@ -1,9 +1,9 @@
 import { BurndownChart } from '../../widgets/burndown-chart';
 import { GitHubRecentCommits } from '../../widgets/github-recent-commits';
 import { Wiki } from '../../widgets/wiki';
-import Sidebar from './sidebar';
 import { SubIssues } from '../../widgets/sub-issues';
 import { Todo } from '../../widgets/todo';
+import { IssueSidebar } from '../../common/issue-sidebar';
 /*
 
 DEAS: 
@@ -15,7 +15,7 @@ DEAS:
 
 export default (
     <cx>
-        <Sidebar />
+        <IssueSidebar />
         <div class="app_content overflow-auto">
             <div class="grid">
                 <SubIssues width={2} />
